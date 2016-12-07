@@ -1,0 +1,15 @@
+<div *ngFor="let restaurant of restaurants" (onListUpdated)="listUpdated($event)">
+    <!--[routerLink]="['/detail', restaurant.id]"-->
+
+    <div class="page-header">
+        <h2>{{restaurant.name}} <span class="badge"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> {{restaurant.rating}}</span>
+            <small>{{restaurant.address}}</small>
+        </h2>
+    </div>
+    <div class="row">
+
+        <div *ngFor="let meal of restaurant.todays_meals" class="col-sm-6 col-md-4">
+            <app-meal [meal]="meal"></app-meal>
+        </div>
+    </div>
+</div>
