@@ -3,14 +3,13 @@ import {Http, Response} from "@angular/http";
 import {Restaurant} from "./restaurant";
 import 'rxjs/add/operator/toPromise';
 import {Observable} from "rxjs";
-import {ShareDataService} from "./share-data.service";
 
 @Injectable()
 export class RestaurantService {
 
   private url = 'app/restaurants';
 
-  constructor(private http: Http, private shareData: ShareDataService) { }
+  constructor(private http: Http) { }
 
   getRestaurants(): Observable<Restaurant[]> {
 

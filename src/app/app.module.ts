@@ -9,22 +9,19 @@ import { AppRoutingModule } from "./app-routing.module";
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from "./in-memory-data.service";
 import {RestaurantService} from "./restaurant.service";
-import { SearchComponent } from './search/search.component';
+
 import { TestComponent } from './test/test.component';
 import { MealComponent } from './meal/meal.component';
 
 import './rxjs-extensions';
-import { ListResultsComponent } from './list-results/list-results.component';
-import {ShareDataService} from "./share-data.service";
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchComponent,
     TestComponent,
-    MealComponent,
-    ListResultsComponent
+    MealComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +30,7 @@ import {ShareDataService} from "./share-data.service";
     AppRoutingModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService) //, { delay: 100 }
   ],
-  providers: [RestaurantService, ShareDataService],
+  providers: [RestaurantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
