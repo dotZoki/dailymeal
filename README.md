@@ -1,5 +1,7 @@
 # DailyMeal
 
+###This is test code of trying to make something with angular2. This is what I could create after learing angular2 for a week or so :)
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.21.
 
 ## Development server
