@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.restaurants = this.searchTerms
-      .debounceTime(300)        // wait for 300ms pause in events
+      //.debounceTime(300)        // wait for 300ms pause in events
       .distinctUntilChanged()   // ignore if next search term is same as previous
       .switchMap(term => term   // switch to new observable each time
           // return the http search observable

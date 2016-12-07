@@ -3,13 +3,13 @@
         <div class="col-md-8 col-md-offset-2">
             <div>
                 <label class="checkbox-inline">
-                    <input type="radio" id="inlineCheckbox1" value="place" name="option" checked="checked" (click)="triggerTermSearch(searchBox.value, 'name')"> search by restaurant name
+                    <input type="radio" id="inlineCheckbox1" value="place" name="option" checked="checked" (click)="triggerTermSearch(searchBox.value, 'name'); searchBox.value = '';"> search by restaurant name
                 </label>
                 <label class="checkbox-inline">
-                    <input type="radio" id="inlineCheckbox2" value="food" name="option" (click)="triggerTermSearch(searchBox.value, 'address')"> searching by restaurant address
+                    <input type="radio" id="inlineCheckbox2" value="food" name="option" (click)="triggerTermSearch(searchBox.value, 'address'); searchBox.value = '';"> searching by restaurant address
                 </label>
                 <label class="checkbox-inline">
-                    <input type="radio" id="inlineCheckbox3" value="place" name="option" (click)="triggerTermSearch(searchBox.value, 'food')"> searching by meal
+                    <input type="radio" id="inlineCheckbox3" value="place" name="option" (click)="triggerTermSearch(searchBox.value, 'food'); searchBox.value = '';"> searching by meal
                 </label>
             </div>
             <div class="input-group">
