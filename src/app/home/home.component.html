@@ -1,4 +1,31 @@
-<div *ngFor="let restaurant of restaurants" (onListUpdated)="listUpdated($event)">
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div>
+                <label class="checkbox-inline">
+                    <input type="radio" id="inlineCheckbox1" value="place" name="option" checked="checked" (click)="triggerTermSearch(searchBox.value, 'name')"> search by restaurant name
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio" id="inlineCheckbox2" value="food" name="option" (click)="triggerTermSearch(searchBox.value, 'address')"> searching by restaurant address
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio" id="inlineCheckbox3" value="place" name="option" (click)="triggerTermSearch(searchBox.value, 'food')"> searching by meal
+                </label>
+            </div>
+            <div class="input-group">
+                <input #searchBox type="text" class="form-control" name="x" placeholder="Search for a place or desired food" (keyup)="doSearch(searchBox.value)">
+                <span class="input-group-btn"><button class="btn btn-default" type="button" (click)="doSearch(searchBox.value)">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button></span>
+            </div>
+        </div>
+        <!-- /.col-lg-6 -->
+    </div>
+    <!-- /.row -->
+</div>
+
+<!--<button (click)="doSearch(searchBox.value)">LOAD</button>-->
+<div *ngFor="let restaurant of restaurants | async">
     <!--[routerLink]="['/detail', restaurant.id]"-->
 
     <div class="page-header">
@@ -13,3 +40,7 @@
         </div>
     </div>
 </div>
+
+
+<!--<app-search></app-search>-->
+<!--<app-list-results></app-list-results>-->

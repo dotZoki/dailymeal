@@ -15,6 +15,7 @@ import { MealComponent } from './meal/meal.component';
 
 import './rxjs-extensions';
 import { ListResultsComponent } from './list-results/list-results.component';
+import {ShareDataService} from "./share-data.service";
 
 @NgModule({
   declarations: [
@@ -30,9 +31,9 @@ import { ListResultsComponent } from './list-results/list-results.component';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 300 })
+    InMemoryWebApiModule.forRoot(InMemoryDataService) //, { delay: 100 }
   ],
-  providers: [RestaurantService],
+  providers: [RestaurantService, ShareDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
