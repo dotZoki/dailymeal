@@ -38,7 +38,6 @@ export class RestaurantService {
   }
 
   searchForRestaurantByFood(term: string): Observable<Restaurant[]> {
-    console.log("FOOD");
     return this.http
         .get(`app/restaurants/`)
         .map(function(r: Response) {

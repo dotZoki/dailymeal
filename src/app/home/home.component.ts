@@ -39,7 +39,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
       });
 
     this.loadRestaurants();
-    //this.doSearch("Palace");
   }
 
   ngAfterViewInit() {
